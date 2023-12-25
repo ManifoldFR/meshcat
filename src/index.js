@@ -565,6 +565,12 @@ class SceneNode {
                     this.controllers.push(radius_controller);
                 }
             }
+            // Spotlight angle
+            if (this.object.angle !== undefined) {
+                let angle_controller = this.folder.add(this.object, "angle").min(0).step(0.01).max(Math.PI / 2 - 0.0001);
+                angle_controller.onChange(() => this.on_update());
+                this.controllers.push(angle_controller);
+            }
             // Point light falloff distance
             if (this.object.distance !== undefined){
                 let distance_controller = this.folder.add(this.object, "distance").min(0).step(0.1).max(100.0);
