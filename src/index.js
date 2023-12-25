@@ -1258,12 +1258,24 @@ class Viewer {
         return spot_light;
     }
 
+    set_folder_callback(path, callback) {
+        this.scene_tree.find(path).on_update = callback;
+    }
+
     add_default_scene_elements() {
         var spot_light = this.create_default_spot_light();
         this.set_object(["Lights", "SpotLight"], spot_light);
         // By default, the spot light is turned off, since
         // it's primarily used for casting detailed shadows
         this.set_property(["Lights", "SpotLight"], "visible", false);
+        const spotlight_helper = new THREE.SpotLightHelper(spot_light, 0xf5a716);
+        spotlight_helper.matrix = spot_light.matrix;
+        this.set_folder_callback(["Lights", "SpotLight"], () => {
+            spotlight_helper.update();
+            this.set_dirty();
+        });
+        this.set_object(["Lights", "SpotLightHelper"], spotlight_helper);
+        this.set_property(["Lights", "SpotLightHelper"], "visible", false);
 
         var point_light_px = new THREE.PointLight(0xffffff,
                                                   this.upgrade_intensity(0.4));
@@ -1341,9 +1353,9 @@ class Viewer {
         bg_folder.on_update = () => {
             this.update_background();
         };
-        this.scene_tree.find(["Background", "<object>"]).on_update = () => {
+        this.set_folder_callback(["Background", "<object>"], () => {
             this.update_background();
-        }
+        })
         this.update_background();
     }
 
