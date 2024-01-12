@@ -623,11 +623,12 @@ This option offers a convenient "watch" mode during an edit-test development
 cycle, but if you're not careful when installing the yarn+node+npm tools you
 might damage other software on your computer.
 
-1. Install [yarn](https://yarnpkg.com/en/docs/install). This should also install `node` and `npm`. Try running `yarn -v` and `npm -v` to make sure those programs are installed.
+1. Install [yarn](https://yarnpkg.com/getting-started). This should also install `node` and `npm`. Try running `yarn -v` and `npm -v` to make sure those programs are installed.
 2. Run `yarn`
     * This will read the `project.json` file and install all the necessary javascript dependencies.
-3. Run `npm run build`
-    * This will run webpack and create the bundled output in `dist/main.min.js`. The build script will also watch for changes to the MeshCat source files and regenerate the bundle whenever those source files change.
+3. Run `yarn build`
+    * This will run webpack and create the bundled output in `dist/main.min.js`.
+    * Running `yarn watch` will run webpack with the `--watch` option: it will watch for changes to the MeshCat source files and regenerate the bundle whenever those source files change.
 4. Try it out! You can load the bundled `main.min.js` in your own application, or you can open up `dist/index.html` in your browser.
 
 Note that due to caching, you may need to do a hard refresh (shift+F5 or ctrl+shift+R) in your browser to reload the updated javascript bundle.
