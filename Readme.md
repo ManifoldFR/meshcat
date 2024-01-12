@@ -443,11 +443,12 @@ To move the camera itself to the point `[1, 2, 3]` and lock its controls, we sug
 
 The MeshCat javascript sources live in `src/index.js`. We use [webpack](https://webpack.js.org/) to bundle up MeshCat with its Three.js dependencies into a single javascript bundle. If you want to edit the MeshCat source, you'll need to regenerate that bundle. Fortunately, it's pretty easy:
 
-1. Install [yarn](https://yarnpkg.com/en/docs/install). This should also install `node` and `npm`. Try running `yarn -v` and `npm -v` to make sure those programs are installed.
+1. Install [yarn](https://yarnpkg.com/getting-started). This should also install `node` and `npm`. Try running `yarn -v` and `npm -v` to make sure those programs are installed.
 2. Run `yarn`
     * This will read the `project.json` file and install all the necessary javascript dependencies.
-3. Run `npm run build`
-    * This will run webpack and create the bundled output in `dist/main.min.js`. The build script will also watch for changes to the MeshCat source files and regenerate the bundle whenever those source files change.
+3. Run `yarn build`
+    * This will run webpack and create the bundled output in `dist/main.min.js`.
+    * Running `yarn watch` will run webpack with the `--watch` option: it will watch for changes to the MeshCat source files and regenerate the bundle whenever those source files change.
 4. Try it out! You can load the bundled `main.min.js` in your own application, or you can open up `dist/index.html` in your browser.
 
 Note that due to caching, you may need to do a hard refresh (shift+F5 or ctrl+shift+R) in your browser to reload the updated javascript bundle.
