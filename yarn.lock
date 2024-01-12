@@ -751,7 +751,7 @@ __metadata:
     webpack: "npm:^5.89.0"
     webpack-cli: "npm:^5.1.4"
     webpack-license-plugin: "npm:^4.4.2"
-    wwobjloader2: "npm:^6.1.0"
+    wwobjloader2: "npm:^6.2.0"
   languageName: unknown
   linkType: soft
 
@@ -1101,10 +1101,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:~0.157.0":
-  version: 0.157.0
-  resolution: "three@npm:0.157.0"
-  checksum: 99fda688a57d25b0502680cd8ea45a0ff98330c1975c7d954321764698f168ae6d2a4dae185e41f46c351388f2b6c5cfef3750e5599c96c6dde5e6eeacd96ebc
+"three@npm:~0.160.0":
+  version: 0.160.0
+  resolution: "three@npm:0.160.0"
+  checksum: d78e9605de6f8072e7fbebe36db7741c13f2ae89be15b4421d2fc7d549e216f53cb3e136d98e9424648f19a42345f47f8186478e038f0046655475166c156b0b
   languageName: node
   linkType: hard
 
@@ -1246,34 +1246,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wtd-core@npm:~2.3.0":
-  version: 2.3.0
-  resolution: "wtd-core@npm:2.3.0"
-  checksum: 0c2d930411a8f494bd4f29998dcb08e6b6572c1e43c2bccf5e54daae38529548604424ab337f2036afd7129279e5c293c85f2a22c0838ab3e4bf8ca2cdb5505b
+"wtd-core@npm:~3.0.0":
+  version: 3.0.0
+  resolution: "wtd-core@npm:3.0.0"
+  checksum: 7fab1d9bd8337e84c45e5b77c14c815cfd4875c6ede51daf9785e5c92eb7fc3ec32fde6177ad7ae8ee0293d5d2679656e9509917be7c20d41786371755cf9471
   languageName: node
   linkType: hard
 
-"wtd-three-ext@npm:~2.3.0":
-  version: 2.3.0
-  resolution: "wtd-three-ext@npm:2.3.0"
+"wtd-three-ext@npm:~3.0.0":
+  version: 3.0.0
+  resolution: "wtd-three-ext@npm:3.0.0"
   dependencies:
-    three: "npm:~0.157.0"
-    wtd-core: "npm:~2.3.0"
+    three: "npm:~0.160.0"
+    wtd-core: "npm:~3.0.0"
   peerDependencies:
     three: ">= 0.137.5 < 1"
-  checksum: 96c387c482fef157d521a37bcaafcb4e894d93f3173b56773cbf9801d28315b919109227b3591763b868f7c286f8ecf5fa0e80f08a10929ffbd3bd64eb675f44
+  checksum: 9bb29184ead53663b8d6c6cab2c51a4924e05cac4bb3c4660ce5dc1a5d35c5d57b7e202f0c1934e15d73e70a0e45cf6fabd90192be379fa810f7fab93797443f
   languageName: node
   linkType: hard
 
-"wwobjloader2@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "wwobjloader2@npm:6.1.0"
+"wwobjloader2@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "wwobjloader2@npm:6.2.0"
   dependencies:
-    three: "npm:~0.157.0"
-    wtd-core: "npm:~2.3.0"
-    wtd-three-ext: "npm:~2.3.0"
+    three: "npm:~0.160.0"
+    wtd-core: "npm:~3.0.0"
+    wtd-three-ext: "npm:~3.0.0"
   peerDependencies:
     three: ">= 0.137.5 < 1"
-  checksum: 19909d877eb14f104369f3ecc977e6eb8e983362ded9f8357490300c72877989fe50e97307990998250384f5e595243f36c18269fbe548fc086f59278db96034
+  checksum: badaf93872b0b27834d32af8580697e52980ad3e8a404f87ec1650955a0be7c88807a836bc8c1f83871ff14f53216f499652370f732b7912ecc7ce9fc0da094f
   languageName: node
   linkType: hard
