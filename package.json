@@ -18,6 +18,7 @@
     "wwobjloader2": "^6.1.0"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   }
 }
